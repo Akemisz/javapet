@@ -2,6 +2,8 @@ package br.com.fiap.domain.entity.animal;
 
 import br.com.fiap.domain.entity.pessoa.Pessoa;
 
+import java.util.List;
+
 public abstract class Animal {
 
     private Long id;
@@ -99,4 +101,10 @@ public abstract class Animal {
                 ", tipo='" + tipo + '\'' +
                 '}';
     }
+
+    public abstract List<Animal> findAll();
+
+    public abstract Animal findById(Long id);
+
+    public abstract Animal persiste(Animal animal);
 }
